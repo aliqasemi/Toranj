@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            nodeOrientation="RIGHT_TO_LEFT" prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Graphics.Controllers.MainPageController">
+    <children>
+        <MenuButton fx:id="SaleMenu" layoutX="1.0" layoutY="77.0" mnemonicParsing="false" text="فروش">
+            <items>
+                <MenuItem fx:id="CreateSaleItem" mnemonicParsing="false" onAction="#CreateSaleItemAction"
+                          text="ایجاد فروش جدید"/>
+                <MenuItem fx:id="SaleTableItem" mnemonicParsing="false" onAction="#SaleTableItemAction"
+                          text="پیگیری های فروش"/>
+            </items>
+        </MenuButton>
+        <MenuButton fx:id="ProductsMenu" layoutX="63.0" layoutY="77.0" mnemonicParsing="false" text="محصولات">
+            <items>
+                <MenuItem fx:id="CreateProductItem" mnemonicParsing="false" onAction="#CreateProductItemAction"
+                          text="ایجاد محصول جدید"/>
+                <MenuItem fx:id="ProductsTableItem" mnemonicParsing="false" onAction="#ProductsTableItemAction"
+                          text="لیست محصولات"/>
+            </items>
+        </MenuButton>
+        <MenuButton fx:id="PurchaseMenu" layoutX="146.0" layoutY="77.0" mnemonicParsing="false" text="خرید">
+            <items>
+                <MenuItem fx:id="CreatePurchaseItem" mnemonicParsing="false" onAction="#CreatePurchaseItemAction"
+                          text="ایجاد خرید جدید"/>
+                <MenuItem fx:id="PurchasesTableItem" mnemonicParsing="false" onAction="#PurchasesTableItemAction"
+                          text="پیگیری های خرید"/>
+            </items>
+        </MenuButton>
+        <MenuButton fx:id="PersonsMenu" layoutX="202.0" layoutY="77.0" mnemonicParsing="false" text="افراد">
+            <items>
+                <MenuItem fx:id="CustomersItem" mnemonicParsing="false" onAction="#CustomersItemAction" text="مشتریان"/>
+                <MenuItem fx:id="PersonnelItem" mnemonicParsing="false" onAction="#PersonnelItemAction" text="پرسنل"/>
+                <MenuItem fx:id="SuppliersItem" mnemonicParsing="false" onAction="#SuppliersItemAction"
+                          text="تهیه کنندگان"/>
+            </items>
+        </MenuButton>
+        <MenuButton fx:id="UserPanelMenu" layoutX="257.0" layoutY="77.0" mnemonicParsing="false" text="پنل کاربری">
+            <items>
+                <MenuItem fx:id="ChangePasswordItem" mnemonicParsing="false" onAction="#ChangePasswordItemAction"
+                          text="تغییر کلمه عبور"/>
+            </items>
+        </MenuButton>
+        <Label fx:id="Label1" layoutX="273.0" layoutY="6.0" prefHeight="17.0" prefWidth="58.0" text="به نام خدا"/>
+        <Label fx:id="CaptionLabel" layoutX="215.0" layoutY="33.0" prefHeight="32.0" prefWidth="211.0"
+               text="سامانه فروشگاه صنایع دستی">
+            <font>
+                <Font name="System Bold" size="16.0"/>
+            </font>
+        </Label>
+        <Separator layoutX="-1.0" layoutY="67.0" prefHeight="0.0" prefWidth="600.0"/>
+        <Label fx:id="TimeLabel" layoutX="503.0" layoutY="15.0" prefHeight="17.0" prefWidth="89.0" text="ساعت: --/--">
+            <font>
+                <Font size="10.0"/>
+            </font>
+        </Label>
+        <Label fx:id="DateLabel" layoutX="503.0" layoutY="41.0" prefHeight="17.0" prefWidth="89.0"
+               text="تاریخ: --/--/----">
+            <font>
+                <Font size="11.0"/>
+            </font>
+        </Label>
+        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="51.0" layoutY="125.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="/Graphics/Other/Logo.jpg"/>
+            </image>
+        </ImageView>
+        <Label fx:id="DateMentionLabel1" layoutX="51.0" layoutY="313.0" prefHeight="19.0" prefWidth="50.0"
+               text="ذکر روز:">
+            <font>
+                <Font name="System Bold" size="13.0"/>
+            </font>
+        </Label>
+        <Label fx:id="DateMentionLabel2" layoutX="58.0" layoutY="339.0" prefHeight="27.0" prefWidth="235.0"
+               text="یا الرحمن الراحمین">
+            <font>
+                <Font name="System Bold" size="17.0"/>
+            </font>
+        </Label>
+        <Separator layoutX="299.0" layoutY="105.0" orientation="VERTICAL" prefHeight="280.0" prefWidth="3.0"/>
+        <Label fx:id="ReminderLabel" layoutX="313.0" layoutY="127.0" prefHeight="21.0" prefWidth="73.0" text="یادآور:">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Label>
+        <Label fx:id="VersionLabel" layoutX="560.0" layoutY="377.0" text="VersionLabel">
+            <font>
+                <Font size="9.0"/>
+            </font>
+        </Label>
+        <TextArea fx:id="ReminderText" layoutX="326.0" layoutY="159.0" prefHeight="205.0" prefWidth="235.0"/>
+        <Hyperlink fx:id="homeLink" layoutX="348.0" layoutY="79.0" onAction="#homeLinkAction" text="صفحه اصلی"
+                   underline="true">
+            <font>
+                <Font size="11.0"/>
+            </font>
+        </Hyperlink>
+        <Label layoutX="14.0" layoutY="33.0" text="کاربر:"/>
+        <Label fx:id="UserLabel" layoutX="47.0" layoutY="33.0" text="UserLabel"/>
+    </children>
+</AnchorPane>
